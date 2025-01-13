@@ -1,0 +1,69 @@
+Inventory {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	background-color: #444;
+	padding: 20px;
+	border-radius: 20px;
+	font-weight: bold;
+	pointer-events: all;
+	border: lightgray 2px solid;
+
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.itemdiv {
+		border: lightgray 2px solid;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		background-color: gray;
+		border-radius: 20px;
+		padding: 10px;
+		margin-top: 10px;
+
+		.button {
+			margin-left: 20px;
+			border-radius: 20px;
+			padding: 3px 15px;
+		}
+
+		.label {
+			font-size: 24px;
+		}
+	}
+
+	.button {
+		border: lightgray 2px solid;
+		height: 40px;
+		background-color: darkgray;
+
+		.label {
+			font-size: 21px;
+			text-align: center;
+		}
+
+		&:hover {
+			background-color: darkblue;
+			border-radius: 20px;
+		}
+	}
+
+	.label {
+		font-family: 'Segoe UI';
+		color: white;
+	}
+
+	.title {
+		margin-bottom: 10px;
+		font-size: 28px;
+		font-family: 'Segoe UI';
+		font-weight: bolder;
+		color: #fff;
+	}
+}

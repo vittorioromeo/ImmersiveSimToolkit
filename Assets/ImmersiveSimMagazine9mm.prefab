@@ -1,0 +1,97 @@
+{
+  "RootObject": {
+    "__guid": "4d8f4885-efd5-4114-b6aa-101643173c6b",
+    "Flags": 0,
+    "Name": "immersivesimmagazine9mm",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.Prop",
+        "__guid": "09774f6a-70a3-426b-8433-4aa04d3d227d",
+        "BodyGroups": 18446744073709551615,
+        "Health": 0,
+        "IsStatic": false,
+        "MaterialGroup": null,
+        "Model": "models/dm_ammo_9mmclip.vmdl",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OnPropBreak": null,
+        "OnPropTakeDamage": null,
+        "StartAsleep": false,
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "ImmersiveSim.Components.Carriable",
+        "__guid": "f660a4a2-00fc-4931-aa3d-062abdf2f46c",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
+      },
+      {
+        "__type": "ImmersiveSim.Components.Collectable",
+        "__guid": "a8d4d2fd-3e0c-4290-815c-6cda5b0154aa",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
+      },
+      {
+        "__type": "ImmersiveSim.Components.MagazineComponent",
+        "__guid": "14cc6c4f-c958-452c-81bf-808eeadd2261",
+        "AmmoCount": 12,
+        "AmmoType": "9mm",
+        "DisplayName": "Magazine",
+        "MaxAmmoCount": 12,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
+      }
+    ],
+    "Children": [],
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [
+    "baik.dm_ammo_9mmclip#43874"
+  ],
+  "__version": 1
+}

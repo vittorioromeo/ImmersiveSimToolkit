@@ -1,0 +1,59 @@
+@using Sandbox;
+@using Sandbox.UI;
+@using ImmersiveSim.Components;
+@using ImmersiveSim.ContextActionSystem;
+@using ImmersiveSim.UISystem;
+@inherits PanelComponent
+@namespace ImmersiveSim.UI
+
+<root>
+	<div class="flex-container">
+		<div class="title">@DisplayName</div>
+
+		@foreach (var gameObject in Player.inventory)
+		{
+			var interactable = gameObject.GetComponent<Interactable>();
+
+			<div class="flex-container itemdiv">
+				<div class="label">@(interactable.DisplayName + GetInventoryTextFor(interactable))</div>
+
+				@foreach (var (contextActionProvider, contextAction) in GetInventoryActions(gameObject))
+				{
+					<div class="button"
+						 onclick="@( () => DoContextAction( contextActionProvider, contextAction ) )">
+						<div class="label">@(contextAction.Name)</div>
+					</div>
+				}
+			</div>
+		}
+	</div>
+</root>
+
+@code
+{
+	[Property, TextArea] public string DisplayName { get; set; } = "Inventory";
+	[Property] public Player Player { get; set; }
+	public int RebuildBump { get; set; }
+
+	protected override int BuildHash() => System.HashCode.Combine(DisplayName + RebuildBump);
+
+	private IEnumerable<(IContextActionProvider, ContextAction)> GetInventoryActions(GameObject gameObject)
+	{
+		return Utils.GetContextActionsWithFlag(Player, gameObject, ContextActionFlags.AvailableInInventory);
+	}
+
+	private void DoContextAction(IContextActionProvider capability, ContextAction contextAction)
+	{
+		Utils.DoContextActionFromUI(Player, ContextActionSource.Inventory, capability, contextAction);
+		++RebuildBump;
+	}
+
+	/// Returns the text to display in the inventory for the given interactable.
+	private static string GetInventoryTextFor(Interactable interactable)
+	{
+		var providers = interactable.Components.GetAll().OfType<IInventoryTextProvider>();
+		var providersArray = providers as IInventoryTextProvider[] ?? providers.ToArray();
+		
+		return !providersArray.Any() ? "" : " [" + providersArray.Aggregate("", (acc, provider) => acc + provider.GetInventoryText()) + "]";
+	}
+}

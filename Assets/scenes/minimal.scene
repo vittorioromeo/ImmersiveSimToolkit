@@ -1,0 +1,1458 @@
+{
+  "__guid": "325a4042-0696-43dd-a79d-dcc314299ba3",
+  "GameObjects": [
+    {
+      "__guid": "821a03b7-a86c-4def-a0b4-bde99a251645",
+      "Flags": 0,
+      "Name": "Scene Information",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SceneInformation",
+          "__guid": "5fb2a354-8164-4347-9128-8edb95fd6cad",
+          "Author": null,
+          "Changes": null,
+          "Description": "",
+          "Group": null,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "SceneTags": "",
+          "Title": "minimal",
+          "Version": null
+        }
+      ]
+    },
+    {
+      "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
+      "Flags": 0,
+      "Name": "Sun",
+      "Rotation": "-0.0729315,0.4822396,0.1305433,0.8631827",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "d3659344-a90d-48fa-927a-095f70fe041f",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.94419,0.97767,1,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Shadows": true,
+          "SkyColor": "0.2532,0.32006,0.35349,1"
+        }
+      ]
+    },
+    {
+      "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
+      "Flags": 0,
+      "Name": "2D Skybox",
+      "Tags": "skybox",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "de79e9e0-5c37-4c54-ac67-bfcdb1d5483b",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "SkyIndirectLighting": true,
+          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.EnvmapProbe",
+          "__guid": "f3e304db-baab-4c1a-a4ec-8442585c2d62",
+          "Bounds": {
+            "Mins": "-512,-512,-512",
+            "Maxs": "512,512,512"
+          },
+          "DelayBetweenUpdates": 0.1,
+          "Feathering": 0.02,
+          "FrameInterval": 5,
+          "MaxDistance": 512,
+          "MultiBounce": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Projection": "Sphere",
+          "RenderDynamically": false,
+          "Texture": "textures/cubemaps/default2.vtex",
+          "TintColor": "1,1,1,1",
+          "UpdateStrategy": "OnEnabled",
+          "ZFar": 4096,
+          "ZNear": 16
+        }
+      ]
+    },
+    {
+      "__guid": "6ad70641-3c6c-4402-9c85-9a4969af4764",
+      "Flags": 0,
+      "Name": "Plane",
+      "Scale": "5,5,5",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "0b6a18bf-fdb8-4661-970e-ef635bfa9baa",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/default.vmat",
+          "Model": "models/dev/plane.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "0.39546,0.51163,0.27128,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "0715cb55-1733-4f5e-8560-c288b8695631",
+          "Center": "0,0,-5",
+          "Friction": null,
+          "IsTrigger": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "Scale": "100,100,10",
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ]
+    },
+    {
+      "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "-267.452,-379.653,297.7903",
+      "Rotation": "-0.1448582,0.2860239,0.4279631,0.8450171",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "cf3cbf96-22b6-4be4-a5d0-672a96c17f9f",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        },
+        {
+          "__type": "Sandbox.Bloom",
+          "__guid": "d73ef723-c888-41d4-802e-f797c79318be",
+          "BloomColor": {
+            "blend": "Linear",
+            "color": [
+              {
+                "t": 0,
+                "c": "1,1,1,1"
+              },
+              {
+                "t": 1,
+                "c": "1,1,1,1"
+              }
+            ],
+            "alpha": []
+          },
+          "BloomCurve": [
+            {
+              "x": 0,
+              "y": 0.5,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 1,
+              "y": 1,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            }
+          ],
+          "Mode": "Additive",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Strength": 0.5,
+          "Threshold": 0.5,
+          "ThresholdWidth": 0.5
+        },
+        {
+          "__type": "Sandbox.Tonemapping",
+          "__guid": "9d76f362-7227-40eb-a189-69353c780c46",
+          "__version": 1,
+          "AutoExposureEnabled": true,
+          "ExposureBias": 2,
+          "ExposureCompensation": 0,
+          "ExposureMethod": "RGB",
+          "MaximumExposure": 2,
+          "MinimumExposure": 1,
+          "Mode": "Legacy",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Rate": 1
+        },
+        {
+          "__type": "Sandbox.Sharpen",
+          "__guid": "0bffee5e-19f2-41c4-88f9-faefbcce6bf4",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Scale": 0.2
+        }
+      ]
+    },
+    {
+      "__guid": "3667a4c3-9689-40fa-a213-95a8fad7e4c3",
+      "Flags": 0,
+      "Name": "ImmersiveSimPlayer",
+      "Position": "-104.7955,-72.86211,17.64427",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.PlayerController",
+          "__guid": "93298c5f-7a19-406c-a71d-352700f03b49",
+          "AccelerationTime": 0,
+          "AimStrengthBody": 1,
+          "AimStrengthEyes": 1,
+          "AimStrengthHead": 1,
+          "AltMoveButton": "run",
+          "Body": {
+            "_type": "component",
+            "component_id": "654a324a-e264-4066-9fc1-1855adea41a4",
+            "go": "3667a4c3-9689-40fa-a213-95a8fad7e4c3",
+            "component_type": "Rigidbody"
+          },
+          "BodyCollisionTags": null,
+          "BodyHeight": 72,
+          "BodyMass": 500,
+          "BodyRadius": 16,
+          "CameraOffset": "256,0,12",
+          "ColliderObject": {
+            "_type": "gameobject",
+            "go": "1b7e39b8-afbb-4947-8e6e-0025b20d422d",
+            "prefab": null
+          },
+          "DeaccelerationTime": 0,
+          "DuckedHeight": 36,
+          "DuckedSpeed": 70,
+          "EnableFootstepSounds": true,
+          "EnablePressing": true,
+          "EyeDistanceFromTop": 8,
+          "FootstepMixer": {
+            "Name": "unknown",
+            "Id": "00000000-0000-0000-0000-000000000000"
+          },
+          "FootstepVolume": 1,
+          "HideBodyInFirstPerson": true,
+          "JumpSpeed": 300,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "ReachLength": 130,
+          "Renderer": {
+            "_type": "component",
+            "component_id": "c262d5d2-092c-4244-952d-d696c3665dae",
+            "go": "8468fb9a-9451-4d2d-9cd1-89e95cc13aba",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "RotateWithGround": true,
+          "RotationAngleLimit": 45,
+          "RotationSpeed": 1,
+          "RunByDefault": false,
+          "RunSpeed": 320,
+          "ShowColliderComponents": false,
+          "ShowRigidbodyComponent": false,
+          "ThirdPerson": false,
+          "ToggleCameraModeButton": "view",
+          "UseAnimatorControls": true,
+          "UseButton": "use",
+          "UseCameraControls": true,
+          "UseFovFromPreferences": true,
+          "UseInputControls": true,
+          "WalkSpeed": 110
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "654a324a-e264-4066-9fc1-1855adea41a4",
+          "AngularDamping": 1,
+          "Gravity": true,
+          "LinearDamping": 0.1,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": true,
+            "Yaw": true,
+            "Roll": true
+          },
+          "MassCenterOverride": "0,0,36",
+          "MassOverride": 500,
+          "MotionEnabled": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OverrideMassCenter": true,
+          "RigidbodyFlags": "DisableCollisionSounds",
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.Movement.MoveModeWalk",
+          "__guid": "56ac1f5b-a6d0-42cf-a7ac-6107a1948b66",
+          "GroundAngle": 45,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Priority": 0,
+          "StepDownHeight": 18,
+          "StepUpHeight": 18
+        },
+        {
+          "__type": "Sandbox.Movement.MoveModeSwim",
+          "__guid": "364b20f9-4025-47ce-9e97-303f2c2662dc",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Priority": 10,
+          "SwimLevel": 0.7
+        },
+        {
+          "__type": "Sandbox.Movement.MoveModeLadder",
+          "__guid": "5cf6fb9b-dd07-4810-9bd6-33cddc6017b7",
+          "ClimbableTags": "ladder",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Priority": 5
+        },
+        {
+          "__type": "ImmersiveSim.Player",
+          "__guid": "6b6bd218-e685-4962-89ca-2e378a4057f0",
+          "InteractionRange": 120,
+          "InteractionReticleParams": {
+            "CornerFactor": 0.1,
+            "CornerRounding": 10,
+            "LineThickness": 2.5,
+            "Color": "1,1,1,1",
+            "DisplayTextScope": {
+              "Text": "",
+              "TextColor": "1,1,1,1",
+              "FontName": "Roboto",
+              "FontSize": 24,
+              "FontWeight": 400,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": true,
+                "Size": 1,
+                "Color": "0,0,0,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "DetailsTextScope": {
+              "Text": "",
+              "TextColor": "1,1,1,1",
+              "FontName": "Roboto",
+              "FontSize": 18,
+              "FontWeight": 400,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": true,
+                "Size": 1,
+                "Color": "0,0,0,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            }
+          },
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "PlayerController": {
+            "_type": "component",
+            "component_id": "93298c5f-7a19-406c-a71d-352700f03b49",
+            "go": "3667a4c3-9689-40fa-a213-95a8fad7e4c3",
+            "component_type": "PlayerController"
+          },
+          "UI": {
+            "_type": "gameobject",
+            "go": "250b40d3-502e-4d48-a998-b302a8342ce7",
+            "prefab": null
+          }
+        },
+        {
+          "__type": "ImmersiveSim.Components.Carrier",
+          "__guid": "80dc19b7-3286-4757-aa77-b029b78267e9",
+          "MaxCarryDistance": 50,
+          "MinCarryDistance": 30,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Player": {
+            "_type": "component",
+            "component_id": "6b6bd218-e685-4962-89ca-2e378a4057f0",
+            "go": "3667a4c3-9689-40fa-a213-95a8fad7e4c3",
+            "component_type": "Player"
+          },
+          "PlayerController": {
+            "_type": "component",
+            "component_id": "93298c5f-7a19-406c-a71d-352700f03b49",
+            "go": "3667a4c3-9689-40fa-a213-95a8fad7e4c3",
+            "component_type": "PlayerController"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "8468fb9a-9451-4d2d-9cd1-89e95cc13aba",
+          "Flags": 0,
+          "Name": "Body",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "c262d5d2-092c-4244-952d-d696c3665dae",
+              "AnimationGraph": null,
+              "BodyGroups": 681,
+              "BoneMergeTarget": null,
+              "CreateAttachments": false,
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen_human/citizen_human_male.vmdl",
+              "Morphs": {
+                "cheekPuff": 0
+              },
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Parameters": {
+                "bools": {},
+                "ints": {},
+                "floats": {},
+                "vectors": {},
+                "rotations": {}
+              },
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Sequence": {
+                "Name": null
+              },
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
+            }
+          ]
+        },
+        {
+          "__guid": "1b7e39b8-afbb-4947-8e6e-0025b20d422d",
+          "Flags": 1,
+          "Name": "Colliders",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CapsuleCollider",
+              "__guid": "e6f6ae69-b64c-4518-94fd-883fb4727085",
+              "End": "0,0,45.05097",
+              "Friction": 0,
+              "IsTrigger": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Radius": 11.313708,
+              "Start": "0,0,60.68629",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "644cb164-e5f2-40d9-8195-3bae21e2cf8b",
+              "Center": "0,0,18",
+              "Friction": 0,
+              "IsTrigger": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "16,16,36",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "9df5e241-5567-4caa-8903-6d6d4a534d97",
+      "Flags": 0,
+      "Name": "ImmersiveSimPistol",
+      "Position": "22.89448,52.64367,41.79684",
+      "Rotation": "0.00000002980232,0,-0.5893927,0.8078467",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "56060746-dfea-42a6-8db7-69ba85cf655c",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "pistol/pistol_model.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ImmersiveSim.Components.Carriable",
+          "__guid": "0c1002aa-9dad-4bd8-af1b-db3e4be7fce5",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Interactable",
+          "__guid": "2f2f1d93-94a9-4493-8613-760de81cdff1",
+          "DisplayName": "Pistol",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Equipment",
+          "__guid": "a1058e51-d89e-4d65-aeea-f7045e0b77df",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Collectable",
+          "__guid": "dff54b19-3de2-4d9f-a281-0e7a8cff2102",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Pistol9mm",
+          "__guid": "b9b84403-4369-498a-9535-6b9724352383",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.MagazineUser",
+          "__guid": "e4d9bcbe-7ae8-4d63-80df-4458f4be6a89",
+          "AmmoType": "9mm",
+          "LoadedMagazine": null,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ]
+    },
+    {
+      "__guid": "250b40d3-502e-4d48-a998-b302a8342ce7",
+      "Flags": 0,
+      "Name": "ImmersiveSimUI",
+      "Position": "196.2853,12.50768,-128.4974",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "82a26294-b158-490d-bc52-c0a85b0775bb",
+          "AutoScreenScale": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Opacity": 1,
+          "Scale": 1,
+          "ScaleStrategy": "ConsistentHeight",
+          "ZIndex": 100
+        },
+        {
+          "__type": "ImmersiveSim.UI.Crosshair",
+          "__guid": "22a374b5-c794-4af2-b9cb-6147c8efb0ae",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.UI.ContextMenu",
+          "__guid": "bc8b165e-1edd-43e7-bd92-d3ba4d689b54",
+          "__enabled": false,
+          "DisplayName": "",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Player": {
+            "_type": "component",
+            "component_id": "6b6bd218-e685-4962-89ca-2e378a4057f0",
+            "go": "3667a4c3-9689-40fa-a213-95a8fad7e4c3",
+            "component_type": "Player"
+          }
+        },
+        {
+          "__type": "ImmersiveSim.UI.Inventory",
+          "__guid": "1fbc3b99-bcb5-415a-a8ea-f10e94df7d2e",
+          "DisplayName": "Inventory",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Player": {
+            "_type": "component",
+            "component_id": "6b6bd218-e685-4962-89ca-2e378a4057f0",
+            "go": "3667a4c3-9689-40fa-a213-95a8fad7e4c3",
+            "component_type": "Player"
+          }
+        }
+      ]
+    },
+    {
+      "__guid": "fe3c768c-80ac-4556-9390-67638cce5966",
+      "Flags": 0,
+      "Name": "ImmersiveSimAmmoBag",
+      "Position": "-46.94388,21.86559,3.891243",
+      "Scale": "0.35,0.35,0.35",
+      "__Prefab": "immersivesimammobagprefab.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "4ead2a97-5eb6-40fc-9441-a3d7ff1f13c8",
+      "Flags": 0,
+      "Name": "ImmersiveSimCrate",
+      "Position": "48.27422,1.545354,0.000005722046",
+      "Scale": "0.6,0.6,0.6",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "bfed8322-734e-4fd9-b446-8d3bb7e9d85b",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/woodcrate/woodcrate.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ImmersiveSim.Components.Interactable",
+          "__guid": "371d50f3-0b43-4e7f-adc6-8cee7e2fc937",
+          "DisplayName": "Crate",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Carriable",
+          "__guid": "a9c95029-ec15-4489-baf5-2ad7d081526b",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ]
+    },
+    {
+      "__guid": "cc225f00-c90a-4bd4-bf71-86198c562070",
+      "Flags": 0,
+      "Name": "ImmersiveSimTable",
+      "Position": "24.21551,44.52439,0.004927282",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "341998bb-b02a-40d5-9f11-de851a5d09ae",
+          "BodyGroups": 18446744073709551615,
+          "Health": 80,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/wooden_table_02.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ImmersiveSim.Components.Interactable",
+          "__guid": "a8a515bf-0d81-41cf-8cf4-f4fe028773da",
+          "DisplayName": "Table",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Carriable",
+          "__guid": "f7d2eb45-9ac0-43a1-8fe6-7c264b3deb94",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ]
+    },
+    {
+      "__guid": "4d8f4885-efd5-4114-b6aa-101643173c6b",
+      "Flags": 0,
+      "Name": "ImmersiveSimMagazine9mm",
+      "Position": "31.6812,35.69958,31.64291",
+      "Enabled": true,
+      "__Prefab": "immersivesimmagazine9mm.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "4359918b-ea84-4434-8e55-0acc04b91a82",
+      "Flags": 0,
+      "Name": "ImmersiveSimBottle (2)",
+      "Position": "43.80379,6.675369,25.00773",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "385ce292-29ad-483c-ac7d-7533e789936f",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/bottles/jameson/bottle_jameson.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ImmersiveSim.Components.Carriable",
+          "__guid": "24fa5d15-f887-4698-8e68-e862259d4014",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Interactable",
+          "__guid": "5903a415-9cfa-43f7-a47a-4c91f8ae3608",
+          "DisplayName": "Bottle",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Collectable",
+          "__guid": "c8bacc1e-2425-4843-b299-2979180a4623",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ]
+    },
+    {
+      "__guid": "4a5dbba0-9828-4a4b-8209-b5cb901b7465",
+      "Flags": 0,
+      "Name": "ImmersiveSimBottle (1)",
+      "Position": "42.39614,-4.411926,23.81413",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "1db4c70c-6f78-4957-a2e7-71bd79e28256",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/bottles/jameson/bottle_jameson.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ImmersiveSim.Components.Carriable",
+          "__guid": "17f8b4bb-5082-4f7b-bfb0-f7bac100eae0",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Interactable",
+          "__guid": "c7e41a29-ad55-4bd7-b79b-158bce52797f",
+          "DisplayName": "Bottle",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Collectable",
+          "__guid": "325b4474-a6eb-4002-b6ad-d3f8b994b948",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ]
+    },
+    {
+      "__guid": "80ca7c7b-90e8-4fbc-87de-77da78aa218b",
+      "Flags": 0,
+      "Name": "ImmersiveSimBottle",
+      "Position": "30.14124,62.71383,31.85697",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "444c8379-2dfc-48e0-82e6-4c2b1c62afaf",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/bottles/jameson/bottle_jameson.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ImmersiveSim.Components.Carriable",
+          "__guid": "76f20b48-c54f-4710-89a5-38b9a86d7978",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Interactable",
+          "__guid": "ec525426-8dab-4249-811b-3c1f06a43cee",
+          "DisplayName": "Bottle",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Collectable",
+          "__guid": "1a5c2176-9ee4-419d-8a89-012d2758cbc9",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ]
+    },
+    {
+      "__guid": "48d9e881-76aa-44b0-a93d-71c097325eb6",
+      "Flags": 0,
+      "Name": "ImmersiveSimWall",
+      "Position": "136.0567,-167.0815,0",
+      "Rotation": "0,-0,-0.0828082,0.9965655",
+      "Scale": "4,4,4",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "f568cfcb-d1ba-4218-b97b-261841de4117",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/asset-quest/halloween/assembled_wall_1.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.FixedJoint",
+          "__guid": "d4e52b07-80ba-4d39-bdd7-45da186fa96f",
+          "AngularDamping": 1,
+          "AngularFrequency": 10,
+          "Attachment": "Auto",
+          "Body": {
+            "_type": "gameobject",
+            "go": "cbed128d-e87b-482b-a0d7-4b90fdfab09f",
+            "prefab": null
+          },
+          "BreakForce": 0,
+          "BreakTorque": 0,
+          "EnableCollision": false,
+          "LinearDamping": 1,
+          "LinearFrequency": 10,
+          "LocalFrame1": {
+            "Position": "0,0,0",
+            "Scale": "0,0,0",
+            "Rotation": "0,0,0,0"
+          },
+          "LocalFrame2": {
+            "Position": "0,0,0",
+            "Scale": "0,0,0",
+            "Rotation": "0,0,0,0"
+          },
+          "OnBreak": null,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "StartBroken": false
+        }
+      ]
+    },
+    {
+      "__guid": "1c01ed46-95b4-443a-bb1e-5ef7b57885d8",
+      "Flags": 0,
+      "Name": "ImmersiveSimBattery (1)",
+      "Position": "20.6793,40.96876,31.52833",
+      "Scale": "0.65,0.65,0.65",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "3ab42ecc-f597-403c-92c7-e91678c73605",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/dm_battery.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ImmersiveSim.Components.Carriable",
+          "__guid": "e7472efd-a5f6-4294-bfcb-045e693b6db9",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Interactable",
+          "__guid": "498aec0a-14d3-46a7-832f-351b5ffafca2",
+          "DisplayName": "Battery",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Collectable",
+          "__guid": "f22b0a8e-db4c-461d-944a-16eac874305c",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Battery",
+          "__guid": "f7623ada-3600-4e98-8ac4-4b4cf1e1ff69",
+          "Charged": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ]
+    },
+    {
+      "__guid": "e71de7d4-676a-4dbb-8d79-1daf424bdbda",
+      "Flags": 0,
+      "Name": "ImmersiveSimBattery",
+      "Position": "20.6793,29.8727,31.52833",
+      "Scale": "0.65,0.65,0.65",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "8e1158a6-0113-48e4-8f8b-0290c6daf526",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/dm_battery.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ImmersiveSim.Components.Carriable",
+          "__guid": "c75248a9-37e8-455a-be80-3d7e92761f76",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Interactable",
+          "__guid": "79ec385d-7d52-4a17-b999-dbd287af7e6d",
+          "DisplayName": "Battery",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Collectable",
+          "__guid": "3fa6dd88-4f42-48fa-a272-ff34ccf9a7ab",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Battery",
+          "__guid": "d303318d-257c-4244-8bbb-375c6ce3456b",
+          "Charged": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ]
+    },
+    {
+      "__guid": "cbed128d-e87b-482b-a0d7-4b90fdfab09f",
+      "Flags": 0,
+      "Name": "ImmersiveSimCharger",
+      "Position": "105.5844,-54.744,55.13277",
+      "Rotation": "0,0,0.6087615,0.7933534",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "2803b300-9d1c-4c50-94c8-6fd88045bc9d",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/hev_charger/hev_charger.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.FixedJoint",
+          "__guid": "4135e2f7-e85c-4cd8-934f-82c4e7869b5a",
+          "AngularDamping": 1,
+          "AngularFrequency": 10,
+          "Attachment": "Auto",
+          "Body": {
+            "_type": "gameobject",
+            "go": "cbed128d-e87b-482b-a0d7-4b90fdfab09f",
+            "prefab": null
+          },
+          "BreakForce": 0,
+          "BreakTorque": 0,
+          "EnableCollision": false,
+          "LinearDamping": 1,
+          "LinearFrequency": 10,
+          "LocalFrame1": {
+            "Position": "0,0,0",
+            "Scale": "0,0,0",
+            "Rotation": "0,0,0,0"
+          },
+          "LocalFrame2": {
+            "Position": "0,0,0",
+            "Scale": "0,0,0",
+            "Rotation": "0,0,0,0"
+          },
+          "OnBreak": null,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "StartBroken": false
+        },
+        {
+          "__type": "ImmersiveSim.Components.Interactable",
+          "__guid": "73eb4396-49b4-450a-bebf-4a12f42c1025",
+          "DisplayName": "Charger",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Charger",
+          "__guid": "461d8320-5f1f-48cf-a539-72b26695be07",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ]
+    },
+    {
+      "__guid": "69d8c0a9-cf52-4be0-86f2-4de3f3b3cdd8",
+      "Flags": 0,
+      "Name": "ImmersiveSimReplicator",
+      "Position": "-91.96744,-133.3815,0",
+      "Rotation": "0,0,0.8660254,0.5000001",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "ee332329-66ca-4982-acdb-053f61bc3fc7",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": true,
+          "MaterialGroup": null,
+          "Model": "models/placeholder/placeholder_vending_machine01.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ImmersiveSim.Components.Interactable",
+          "__guid": "213b6776-628e-4234-a607-240650007c12",
+          "DisplayName": "Replicator",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "ImmersiveSim.Components.Replicator",
+          "__guid": "5ad595ce-1ccf-4d02-b80e-383e0a576841",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 60,
+    "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "Metadata": {
+      "Title": "minimal"
+    },
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "ResourceVersion": 2,
+  "Title": "minimal",
+  "Description": null,
+  "__references": [
+    "baik.dm_battery#43877",
+    "blmndy.hev_charger#35048",
+    "gex.pistol#54864",
+    "gvar.ph_vending_01#1093",
+    "peter.woodcrate#73673",
+    "polyhaven.wooden_table_02#24212",
+    "saandy.bottle_jameson#8620",
+    "titanovsky.assembledwall1#78439"
+  ],
+  "__version": 2
+}

@@ -1,0 +1,65 @@
+@using Sandbox;
+@using Sandbox.UI;
+@using System;
+@using ImmersiveSim.Components;
+@using ImmersiveSim.ContextActionSystem;
+@inherits PanelComponent
+@namespace ImmersiveSim.UI
+
+<root>
+	<div class="flex-container">
+		<div class="title">@DisplayName</div>
+
+		@{
+			var nextIndex = 0;
+		}
+
+		@foreach (var (contextActionProvider, contextAction) in GetContextMenuActions())
+		{
+			<div class="button"
+				 onclick="@( () => DoContextAction(contextActionProvider, contextAction) )">
+				<div class="label">@($"{++nextIndex}: {contextAction.Name}")</div>
+			</div>
+		}
+	</div>
+</root>
+
+@code
+{
+	[Property, TextArea] public string DisplayName { get; set; } = "";
+	[Property] public Player Player { get; set; }
+	public Interactable Interactable { get; set; }
+	private int RebuildBump { get; set; }
+
+	protected override int BuildHash() => System.HashCode.Combine(DisplayName, Player, Interactable, RebuildBump);
+
+	private void DoContextAction(IContextActionProvider capability, ContextAction contextAction)
+	{
+		Utils.DoContextActionFromUI(Player, ContextActionSource.Menu, capability, contextAction);
+		++RebuildBump;
+	}
+
+	private IEnumerable<(IContextActionProvider, ContextAction)> GetContextMenuActions()
+	{
+		return Utils.GetContextActionsWithFlag(Player, Interactable.GameObject, ContextActionFlags.AvailableInContextMenu);
+	}
+
+	protected override void OnUpdate()
+	{
+		var slotsToCheck = new string[] { "Slot1", "Slot2", "Slot3", "Slot4", "Slot5", "Slot6", "Slot7", "Slot8", "Slot9" };
+
+		var nextIndex = 0;
+
+		foreach (var slot in slotsToCheck)
+		{
+			++nextIndex;
+
+			if (!Input.Pressed(slot)) { continue; }
+
+			var (contextActionProvider, contextAction) = GetContextMenuActions().Take(nextIndex).Last();
+			if (contextAction == null) { continue; }
+
+			DoContextAction(contextActionProvider, contextAction);
+		}
+	}
+}

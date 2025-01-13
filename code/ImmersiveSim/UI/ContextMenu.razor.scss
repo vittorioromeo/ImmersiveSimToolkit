@@ -1,0 +1,51 @@
+ContextMenu {
+	position: absolute;
+	background-color: #444;
+	padding: 20px;
+	border-radius: 20px;
+	font-weight: bold;
+	pointer-events: all;
+	border: lightgray 2px solid;
+
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.button {
+		border: lightgray 2px solid;
+		width: 200px;
+		height: 40px;
+		background-color: darkgray;
+		border-radius: 20px;
+		margin-bottom: 5px;
+
+		.label {
+			width: 100%;
+			height: 100%;
+			font-size: 25px;
+			text-align: center;
+		}
+
+		&:hover {
+			background-color: darkblue;
+			border-radius: 20px;
+		}
+	}
+
+	.label {
+		font-family: 'Segoe UI';
+		font-weight: bold;
+		color: #fff;
+	}
+
+	.title {
+		margin-bottom: 20px;
+		font-size: 28px;
+		font-family: 'Segoe UI';
+		font-weight: bolder;
+		color: #fff;
+	}
+}
